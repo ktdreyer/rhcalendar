@@ -1,6 +1,9 @@
 Red Hat business days calendar
 ==============================
 
+.. image:: https://travis-ci.org/ktdreyer/rhcalendar.svg?branch=master
+          :target: https://travis-ci.org/ktdreyer/rhcalendar
+
 This module builds on `workdays <https://pypi.python.org/pypi/workdays/>`_ to
 provide a ``networkdays()`` method that knows about the Red Hat business
 holidays.
