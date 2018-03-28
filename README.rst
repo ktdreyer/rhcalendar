@@ -11,12 +11,12 @@ Example: determine number of business days from today
 .. code-block:: python
 
     import datetime
-    from rhcalendar import workdays
+    from rhcalendar import networkdays
 
     today = datetime.date.today()
     to_date = datetime.date(2020, 1, 1)  # something far away...
 
-    days = workdays(from_date=today, to_date=to_date)
+    days = networkdays(from_date=today, to_date=to_date)
 
     print('%s is %d Red Hat business days from now.' % (to_date, days))
     # prints "2020-01-01 is 435 Red Hat business days from now."
