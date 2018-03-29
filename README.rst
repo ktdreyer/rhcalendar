@@ -31,10 +31,13 @@ Example: determine number of business days from today
 Locales
 -------
 
-Currently this module only has the Red Hat US holiday calendar. Contributions
-welcome for other locales.
+Currently this module has the Red Hat holiday calendars for the US and Quebec,
+Canada. Contributions welcome for other locales.
 
 .. code-block:: python
 
-    # Only locale option is 'en-US' (the default) for now.
-    days = workdays(from_date, to_date, locale='en-US')
+    # Locale option defaults to 'en-US':
+    days = workdays(from_date, to_date)
+
+    # Or use Quebec, Canada holidays:
+    days = workdays(from_date, to_date, locale='qc-CA')
