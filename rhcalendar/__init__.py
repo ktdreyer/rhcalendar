@@ -1,7 +1,7 @@
 from rhcalendar.locales import locales
 import workdays
 
-__version__ = '1.0.1'
+__version__ = '1.1.0'
 
 
 def networkdays(from_date, to_date, locale='en-US'):
