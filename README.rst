@@ -8,7 +8,7 @@ Red Hat business days calendar
              :target: https://badge.fury.io/py/rhcalendar
 
 
-This module builds on `workdays <https://pypi.python.org/pypi/workdays/>`_ to
+This module builds on `workdays <https://pypi.org/project/workdays/>`_ to
 provide a ``networkdays()`` method that knows about the Red Hat business
 holidays.
 
