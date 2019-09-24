@@ -2,7 +2,7 @@ import datetime
 
 
 locales = {
-    # US @ Mojo DOC-1152745
+    # US @ Mojo DOC-1199403
     'en-US': [
         datetime.date(2018, 1, 1),
         datetime.date(2018, 3, 30),
@@ -31,6 +31,19 @@ locales = {
         datetime.date(2019, 12, 30),
         datetime.date(2019, 12, 31),
         datetime.date(2020, 1, 1),
+        datetime.date(2020, 4, 10),
+        datetime.date(2020, 5, 25),
+        datetime.date(2020, 7, 3),
+        datetime.date(2020, 9, 7),
+        datetime.date(2020, 11, 26),
+        datetime.date(2020, 11, 27),
+        datetime.date(2020, 12, 24),
+        datetime.date(2020, 12, 25),
+        datetime.date(2020, 12, 28),
+        datetime.date(2020, 12, 29),
+        datetime.date(2020, 12, 30),
+        datetime.date(2020, 12, 31),
+        datetime.date(2021, 1, 1),
     ],
     'qc-CA': [
         datetime.date(2018, 1, 1),
