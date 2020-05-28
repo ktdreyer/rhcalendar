@@ -33,6 +33,7 @@ locales = {
         datetime.date(2020, 1, 1),
         datetime.date(2020, 4, 10),
         datetime.date(2020, 5, 25),
+        datetime.date(2020, 6, 12),
         datetime.date(2020, 7, 3),
         datetime.date(2020, 9, 7),
         datetime.date(2020, 11, 26),
