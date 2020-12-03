@@ -21,12 +21,12 @@ Example: determine number of business days from today
     from rhcalendar import networkdays
 
     today = datetime.date.today()
-    to_date = datetime.date(2020, 1, 1)  # something far away...
+    to_date = datetime.date(2023, 1, 1)  # something far away...
 
     days = networkdays(from_date=today, to_date=to_date)
 
     print('%s is %d Red Hat business days from now.' % (to_date, days))
-    # prints "2020-01-01 is 435 Red Hat business days from now."
+    # prints "2023-01-01 is 522 Red Hat business days from now."
 
 Locales
 -------
