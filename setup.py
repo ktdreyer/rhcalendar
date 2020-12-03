@@ -1,8 +1,6 @@
 import os
 import re
 import subprocess
-import sys
-from setuptools.command.test import test as TestCommand
 from setuptools import setup, Command
 try:
     # Python 2 backwards compat
@@ -112,26 +110,6 @@ class ReleaseCommand(Command):
         subprocess.check_call(cmd)
 
 
-class PyTest(TestCommand):
-    user_options = [('pytest-args=', 'a', "Arguments to pass to py.test")]
-
-    def initialize_options(self):
-        TestCommand.initialize_options(self)
-        self.pytest_args = ''
-
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import pytest
-        args = 'rhcalendar --flake8 ' + self.pytest_args
-        errno = pytest.main(args.split())
-        sys.exit(errno)
-
-
 setup(
     name='rhcalendar',
     description='Red Hat business days calendar',
@@ -155,8 +133,5 @@ setup(
     install_requires=[
         'workdays',
     ],
-    tests_require=[
-        'pytest-flake8',
-    ],
-    cmdclass={'test': PyTest, 'bump': BumpCommand, 'release': ReleaseCommand},
+    cmdclass={'bump': BumpCommand, 'release': ReleaseCommand},
 )
