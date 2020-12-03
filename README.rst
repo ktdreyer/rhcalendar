@@ -1,8 +1,8 @@
 Red Hat business days calendar
 ==============================
 
-.. image:: https://travis-ci.org/ktdreyer/rhcalendar.svg?branch=master
-          :target: https://travis-ci.org/ktdreyer/rhcalendar
+.. image:: https://github.com/ktdreyer/rhcalendar/workflows/tests/badge.svg
+             :target: https://github.com/ktdreyer/rhcalendar/actions
 
 .. image:: https://badge.fury.io/py/rhcalendar.svg
              :target: https://badge.fury.io/py/rhcalendar
