@@ -66,6 +66,7 @@ locales = {
         datetime.date(2022, 4, 15),
         datetime.date(2022, 5, 20),
         datetime.date(2022, 5, 30),
+        datetime.date(2022, 6, 20),
         datetime.date(2022, 7, 4),
         datetime.date(2022, 8, 12),
         datetime.date(2022, 9, 5),
