@@ -41,8 +41,3 @@ Canada. Contributions welcome for other locales.
 
     # Or use Quebec, Canada holidays:
     days = workdays(from_date, to_date, locale='qc-CA')
-
-Packages that use this package
-------------------------------
-
-* `helga-productpages <https://pypi.org/project/helga-productpages/>`_
