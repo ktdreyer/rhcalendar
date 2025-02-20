@@ -28,7 +28,8 @@ jobs:
         PY=py$(echo ${{ matrix.python-version }} | tr -d ".")
         tox -e ${PY} -- --cov-report=xml rhcalendar/tests
     - name: Upload coverage to codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v5
       with:
         file: ./coverage.xml
         fail_ci_if_error: true
+        token: ${{ secrets.CODECOV_TOKEN }}
