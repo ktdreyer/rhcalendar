@@ -2,7 +2,6 @@ import datetime
 
 
 locales = {
-    # US @ Mojo DOC-1199403
     'en-US': [
         datetime.date(2018, 1, 1),
         datetime.date(2018, 3, 30),
