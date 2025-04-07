@@ -16,19 +16,6 @@ jobs:
           - python-version: 3.13
             os: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: pip install tox
-    - name: Test with tox
+    - name: Test envs
       run: |
-        PY=py$(echo ${{ matrix.python-version }} | tr -d ".")
-        tox -e ${PY} -- --cov-report=xml rhcalendar/tests
-    - name: Upload coverage to codecov
-      uses: codecov/codecov-action@v5
-      with:
-        fail_ci_if_error: true
-        token: ${{ secrets.CODECOV_TOKEN }}
+        env
