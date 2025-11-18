@@ -1,7 +1,11 @@
 from rhcalendar.locales import locales
 import workdays
 
-__version__ = '1.3.6'
+try:
+    from rhcalendar._version import __version__
+except ImportError:
+    # Version file not generated yet (e.g., during development before build)
+    __version__ = "0.0.0+unknown"
 
 
 def networkdays(from_date, to_date, locale='en-US'):

@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rhcalendar"
+description = "Red Hat business days calendar"
+authors = [
+    {name = "Ken Dreyer", email = "ktdreyer@ktdreyer.com"},
+]
+readme = "README.rst"
+license = {text = "MIT"}
+keywords = ["workdays"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.11"
+dependencies = [
+    "workdays",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/ktdreyer/rhcalendar"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "rhcalendar/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["rhcalendar"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "rhcalendar/",
+    "README.rst",
+]
+
+[tool.bumpversion]
+current_version = "1.3.6"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+commit = true
+tag = true
+tag_name = "v{new_version}"
+tag_message = "version {new_version}"
+message = "bump version to {new_version}"
