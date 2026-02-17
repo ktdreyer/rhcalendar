@@ -8,7 +8,7 @@ try:
 except ImportError:
     pass
 
-readme = os.path.join(os.path.dirname(__file__), 'README.rst')
+readme = os.path.join(os.path.dirname(__file__), 'README.md')
 LONG_DESCRIPTION = open(readme).read()
 
 
