@@ -114,6 +114,7 @@ setup(
     name='rhcalendar',
     description='Red Hat business days calendar',
     packages=['rhcalendar'],
+    package_data={'rhcalendar': ['py.typed']},
     author='Ken Dreyer',
     author_email='ktdreyer@ktdreyer.com',
     url='https://github.com/ktdreyer/rhcalendar',

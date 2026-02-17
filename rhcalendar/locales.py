@@ -1,7 +1,7 @@
 import datetime
 
 
-locales = {
+locales: dict[str, list[datetime.date]] = {
     'en-US': [
         datetime.date(2018, 1, 1),
         datetime.date(2018, 3, 30),
