@@ -4,7 +4,10 @@ import workdays  # type: ignore[import-untyped]
 
 from rhcalendar.locales import locales
 
-__version__ = '1.3.6'
+try:
+    from rhcalendar._version import __version__
+except ImportError:
+    __version__ = "0.0.0+unknown"
 
 
 def networkdays(from_date: datetime.date, to_date: datetime.date,
