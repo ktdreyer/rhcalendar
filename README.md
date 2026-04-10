@@ -35,3 +35,33 @@ days = workdays(from_date, to_date)
 # Or use Quebec, Canada holidays:
 days = workdays(from_date, to_date, locale='qc-CA')
 ```
+
+# Development
+
+## Building
+
+This project uses `uv` for modern Python packaging:
+
+```bash
+# Build the package
+uv build
+
+# Install in development mode
+uv pip install -e .
+```
+
+## Releasing
+
+This project uses `bump-my-version` for version management and GitHub Actions
+for automated releases to PyPI.
+
+To create a new release:
+
+```bash
+# Bump version and create tag
+bump-my-version bump patch  # or minor/major
+git push origin main --tags
+
+# Create GitHub Release (triggers automatic PyPI publish)
+gh release create v1.3.7 --generate-notes
+```
