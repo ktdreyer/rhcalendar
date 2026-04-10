@@ -8,9 +8,10 @@ def test_init():
 def test_version_fallback(monkeypatch):
     """ When _version.py is missing, __version__ falls back gracefully. """
     import importlib
+    import sys
     import rhcalendar
-    monkeypatch.setitem(
-        __import__('sys').modules, 'rhcalendar._version', None
-    )
+    with monkeypatch.context() as m:
+        m.setitem(sys.modules, "rhcalendar._version", None)
+        importlib.reload(rhcalendar)
+        assert rhcalendar.__version__ == "0.0.0+unknown"
     importlib.reload(rhcalendar)
-    assert rhcalendar.__version__ == "0.0.0+unknown"
