@@ -1,11 +1,11 @@
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
 name = "rhcalendar"
+dynamic = ["version"]
 description = "Red Hat business days calendar"
-version = "1.3.6"
 authors = [
     {name = "Ken Dreyer", email = "ktdreyer@ktdreyer.com"},
 ]
@@ -29,6 +29,12 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/ktdreyer/rhcalendar"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "rhcalendar/_version.py"
 
 [tool.hatch.build.targets.wheel]
 packages = ["rhcalendar"]
